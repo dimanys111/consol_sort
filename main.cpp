@@ -44,6 +44,7 @@ int main(int argc, char* argv[])
             } else {
                 create_file("auto.file");
             }
+            return 0;
         }
         if (com == "-run_file") {
             SortFile sf(size_memori);
@@ -56,6 +57,9 @@ int main(int argc, char* argv[])
             } else {
                 sf.run("auto.file", "out.file");
             }
+            return 0;
         }
+        std::cout << "Введите команду" << std::endl;
     }
+    return -1;
 }
